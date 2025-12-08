@@ -7,7 +7,9 @@
 - pipewire-alsa
 - pipewire-audio
 - alsa-utils
+    - unmute sound
 - dunst
+    - must install libnotify as a dependency
 
 ## Must Learn
 - Linux
