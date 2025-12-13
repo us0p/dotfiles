@@ -11,6 +11,7 @@
 - dunst
     - must install libnotify as a dependency
 - waybar
+- snapd from archlinux aur (enables snap installs)
 
 ## Must Learn
 - Linux
