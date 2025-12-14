@@ -35,7 +35,7 @@ sudo pacman -S --needed --noconfirm \
   alsa-utils \
   dunst \
   libnotify \
-  waybay \
+  waybar \
   zsh # Must make default shell, copy config from repo
 
 cd "$HOME/packages"
@@ -44,17 +44,15 @@ if [[ ! -d dotfiles ]]; then
   git clone https://github.com/us0p/dotfiles.git
 fi
 
-cp "$HOME/packages/dotfiles/configs/*" "$HOME/"
+# Copies Hyprland initial config to fresh install
+cp "$HOME/packages/dotfiles/configs/hyprland/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
+cp -r "$HOME/packages/dotfiles/configs/." "$HOME/"
 
 # makes zsh default shell
 chsh -s /usr/bin/zsh
 
 # uses alsa-utils to unmute master sound
 amixer sset Master unmute
-
-systemctl enable --now sddm.service
-
-# must unmute sound with alsa-utils
 
 cd "$HOME/packages"
 if [[ ! -d snapd ]]; then
@@ -76,3 +74,6 @@ sudo pacman -S --needed --noconfirm \
 sudo snap install obsidian --classic
 
 # CONFIGURES NeoVIM
+
+# Must be last to be enabled
+sudo systemctl enable --now sddm.service
