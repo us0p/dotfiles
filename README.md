@@ -1,4 +1,5 @@
 ## Install
+- hyprland
 - wofi
 - SDDM (must be enabled)
 - ghostty
@@ -12,6 +13,9 @@
     - must install libnotify as a dependency
 - waybar
 - snapd from archlinux aur (enables snap installs)
+- zsh
+    - set it as default shell
+    - copy config from .bashrc to .zshrc and from .bash_profile to .zprofile
 
 ## Must Learn
 - Linux
