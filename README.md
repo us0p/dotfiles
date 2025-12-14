@@ -27,5 +27,7 @@
 ## Installation script
 Download installation script and execute it:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/us0p/dotfiles/refs/heads/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/us0p/dotfiles/refs/heads/main/install.sh -o install.sh
+chmod +x install.sh
+./install.sh
 ```
