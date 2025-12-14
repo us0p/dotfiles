@@ -1,6 +1,9 @@
 #! /bin/bash
 
-sudo pacman -S --needed --noconfirm git base-devel
+sudo pacman -S --needed --noconfirm \
+  git \
+  base-devel \
+  go # YAY dependency
 
 mkdir "$HOME/packages"
 cd "$HOME/packages"
