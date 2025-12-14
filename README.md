@@ -37,7 +37,14 @@ chmod +x install.sh
 ./install.sh
 ```
 
+## Dotfiles DEV
+- To run Hyprland on virtual machines use virt-manager.
+    - Virt manager must use system's python, if you use some python version management tool, you need to turn back python version to global. e.g. pyenv `pyenv global system`.
+- Should download one of the available arhc vm images on the wiki.
+- Recommended configs are:
+    - RAM: 4096MB
+    - CPU: 2
+
 ## NEXT STEPS
 - How to effective reproduce config files in a user extensible way?
-- Setup a reproducible environment that can execute Hyprland to test dotfiles scripts.
 - Divide install script into sections to make it atomic and reduce testing time.
