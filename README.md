@@ -17,6 +17,11 @@
     - set it as default shell
     - copy config from .bashrc to .zshrc and from .bash_profile to .zprofile
 
+## User APPS
+- FireFox (pacman)
+- NeoVIM (pacman)
+- Obsidian (snap install)
+
 ## Must Learn
 - Linux
 - Bash Scripting
@@ -31,3 +36,8 @@ curl -fsSL https://raw.githubusercontent.com/us0p/dotfiles/refs/heads/main/insta
 chmod +x install.sh
 ./install.sh
 ```
+
+## NEXT STEPS
+- How to effective reproduce config files in a user extensible way?
+- Setup a reproducible environment that can execute Hyprland to test dotfiles scripts.
+- Divide install script into sections to make it atomic and reduce testing time.
