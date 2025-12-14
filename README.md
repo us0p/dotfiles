@@ -23,3 +23,9 @@
 
 ## Config Files Changed
 - ~/.config/hypr/hyprland.conf
+
+## Installation script
+Download installation script and execute it:
+```bash
+curl -fsSL https://raw.githubusercontent.com/us0p/dotfiles/refs/heads/main/install.sh | bash
+```
