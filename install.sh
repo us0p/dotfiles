@@ -51,6 +51,9 @@ cp -r "$HOME/packages/dotfiles/configs/." "$HOME/"
 # makes zsh default shell
 chsh -s /usr/bin/zsh
 
+# Enables PipeWire and WirePlumber services
+systemctl --user enable --now pipewire wireplumber
+
 # uses alsa-utils to unmute master sound
 amixer sset Master unmute
 
