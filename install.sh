@@ -133,4 +133,6 @@ if [[ "$STEP" != "initial" ]]; then
 
   # Must be last to be enabled
   sudo systemctl enable --now sddm.service
+
+  exec "$SHELL"
 fi
