@@ -45,10 +45,10 @@ if [[ ! -d dotfiles ]]; then
 fi
 
 # Copies Hyprland initial config to fresh install
-cp -r "$HOME/packages/dotfiles/configs/." "$HOME/"
+cp -r "$HOME/packages/dotfiles/configs/." "$HOME/.config"
 
 # Copies ZSH dotfiles
-cp "$HOME/packagesg/dotfiles/configs/zsh/." "$HOME/"
+cp -r "$HOME/packages/dotfiles/configs/zsh/." "$HOME/"
 
 # makes zsh default shell
 chsh -s /usr/bin/zsh
@@ -85,6 +85,9 @@ makepkg -si
 sudo systemctl enable --now snapd.socket           # enables snap service
 sudo systemctl enable --now snapd.apparmor.service # enabled app armor
 sudo ln -s /var/lib/snapd/snap /snap               # enable snap classic support
+
+# wait until snap finished seeding
+sudo snap wait system seed.loaded
 
 # user apps installation
 sudo pacman -S --needed --noconfirm \
