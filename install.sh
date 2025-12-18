@@ -45,8 +45,10 @@ if [[ ! -d dotfiles ]]; then
 fi
 
 # Copies Hyprland initial config to fresh install
-cp "$HOME/packages/dotfiles/configs/hyprland/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
 cp -r "$HOME/packages/dotfiles/configs/." "$HOME/"
+
+# Copies ZSH dotfiles
+cp "$HOME/packagesg/dotfiles/configs/zsh/." "$HOME/"
 
 # makes zsh default shell
 chsh -s /usr/bin/zsh
@@ -59,11 +61,11 @@ unmute_audio() {
   for i in {1..20}; do
     if amixer scontrols | grep -q 'Master'; then
       amixer sset Master unmute
-      exit 0
+      return 0
     fi
     sleep 0.25
   done
-  exit 1
+  return 1
 }
 
 if unmute_audio; then
