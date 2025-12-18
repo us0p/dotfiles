@@ -124,6 +124,7 @@ if [[ "$STEP" != "initial" ]]; then
 fi
 
 # CONFIGURES NeoVIM
+curl -fsSL https://raw.githubusercontent.com/us0p/nvim/refs/heads/main/setup.sh | bash
 
 # Must be last to be enabled
 sudo systemctl enable --now sddm.service
