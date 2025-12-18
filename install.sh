@@ -25,10 +25,7 @@ hypr | initial)
   ;;
 esac
 
-if [[ ! -d "$HOME/packages" ]]; then
-  mkdir -p "$HOME/packages"
-fi
-
+mkdir -p "$HOME/packages"
 cd "$HOME/packages"
 
 if [[ "$STEP" != "hypr" ]]; then
