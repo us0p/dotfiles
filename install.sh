@@ -25,7 +25,7 @@ hypr | initial)
   ;;
 esac
 
-if [[ "$STEP" != "hypr" && "$STEP" != "initial" ]]; then
+if [[ "$STEP" != "hypr" ]]; then
   sudo pacman -S --needed --noconfirm \
     git \
     base-devel \
