@@ -121,10 +121,16 @@ if [[ "$STEP" != "initial" ]]; then
     neovim
 
   sudo snap install obsidian --classic
+
+  # CONFIGURES NeoVIM
+  cd "$HOME/.config"
+  if [[ ! -d nvim ]]; then
+    git clone https://github.com/us0p/nvim.git
+    cd nvim
+    chmod +x ./setup.sh
+    ./setup.sh
+  fi
+
+  # Must be last to be enabled
+  sudo systemctl enable --now sddm.service
 fi
-
-# CONFIGURES NeoVIM
-curl -fsSL https://raw.githubusercontent.com/us0p/nvim/refs/heads/main/setup.sh | bash
-
-# Must be last to be enabled
-sudo systemctl enable --now sddm.service
