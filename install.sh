@@ -55,7 +55,13 @@ chsh -s /usr/bin/zsh
 systemctl --user enable --now pipewire wireplumber
 
 # uses alsa-utils to unmute master sound
-amixer sset Master unmute
+for i in {1..20}; do
+  if amixer scontrols | grep -q 'Master'; then
+    amixer sset Master unmute
+    echo "Master control was unmuted"
+  fi
+  sleep 0.25
+done
 
 cd "$HOME/packages"
 if [[ ! -d snapd ]]; then
