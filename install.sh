@@ -28,16 +28,13 @@ esac
 mkdir -p "$HOME/packages"
 cd "$HOME/packages"
 
-if [[ "$STEP" != "hypr" ]]; then
-  sudo pacman -S --needed --noconfirm \
-    git \
-    base-devel \
-    go # YAY dependency
+sudo pacman -S --needed --noconfirm \
+  git \
+  base-devel \
+  go # YAY dependency
 
-  if [[ ! -d yay ]]; then
-    git clone https://aur.archlinux.org/yay.git
-  fi
-
+if [[ ! -d yay ]]; then
+  git clone https://aur.archlinux.org/yay.git
   cd yay
   makepkg -si
 
@@ -45,7 +42,9 @@ if [[ "$STEP" != "hypr" ]]; then
     echo "yay installation failed"
     exit 1
   }
+fi
 
+if [[ "$STEP" != "hypr" ]]; then
   yay -S hyprland-git
 fi
 
