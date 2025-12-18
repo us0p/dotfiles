@@ -25,14 +25,17 @@ hypr | initial)
   ;;
 esac
 
+if [[ ! -d "$HOME/packages" ]]; then
+  mkdir -p "$HOME/packages"
+fi
+
+cd "$HOME/packages"
+
 if [[ "$STEP" != "hypr" ]]; then
   sudo pacman -S --needed --noconfirm \
     git \
     base-devel \
     go # YAY dependency
-
-  mkdir -p "$HOME/packages" # -p ?
-  cd "$HOME/packages"
 
   if [[ ! -d yay ]]; then
     git clone https://aur.archlinux.org/yay.git
