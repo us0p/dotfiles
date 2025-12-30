@@ -28,6 +28,7 @@
 
 ## Config Files Changed
 - ~/.config/hypr/hyprland.conf
+- ~/.config/ghostty/config
 
 ## Installation script
 Download installation script and execute it:
@@ -48,3 +49,14 @@ chmod +x install.sh
 ## NEXT STEPS
 - How to effective reproduce config files in a user extensible way?
 - Divide install script into sections to make it atomic and reduce testing time.
+- Might be a good idea to programatically set defaults for locales to avoid unexpected behavior.
+- Create `$HOME/.local/bin` to store scripts.
+- Add it to the path in .zshrc
+- automate Nerd-Fonts icons list creation
+- replicate changes to .zshrc and hyprland.conf
+- waybar initial config:
+    - network
+    - bluetooth
+    - volume
+    - keyboard state
+    - tray

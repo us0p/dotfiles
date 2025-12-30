@@ -1,0 +1,27 @@
+// -*- mode: jsonc -*-
+// to reset waybar use: killall -SIGUSR2 waybar
+{
+	"height": 30,
+	"spacing": 4,
+	// Choose the order of the modules
+	"modules-left": [],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [],
+	"clock": {
+		"format": "   {:%H:%M}",
+		"format-alt": "   {:%Y-%m-%d}",
+		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"mode": "month",
+			"format": {
+				"today": "<b><u>{}</u></b>"
+			}
+		},
+		"actions": {
+			"on-scroll-down": "shift_down",
+			"on-scroll-up": "shift_up"
+		}
+	}
+}

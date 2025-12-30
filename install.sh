@@ -62,7 +62,20 @@ if [[ "$STEP" != "initial" ]]; then
     dunst \
     libnotify \
     waybar \
-    zsh # Must make default shell, copy config from repo
+    zsh \ # Must make default shell, copy config from repo \
+    noto-fonts \
+    noto-fonts-cjk \
+    noto-fonts-emoji \
+    noto-fonts-extra \
+    ttf-jetbrains-mono \
+    ttf-jetbrains-mono-nerd \
+    ttf-dejavu \
+    ttf-liberation \
+    ttf-roboto \
+    ttf-font-awesome \
+    wl-clipboard \
+    jq \
+    fzf
 
   cd "$HOME/packages"
 
